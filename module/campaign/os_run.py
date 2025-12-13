@@ -82,9 +82,9 @@ class OSCampaignRun(OSMapOperation):
         if self.config.SERVER in ['tw']:
             logger.info(f'OpsiMonthBoss is not supported in {self.config.SERVER},'
                         ' please contact server maintainers')
-            self.config.task_delay(server_update=True)
-            self.config.task_stop()
-            return
+            #self.config.task_delay(server_update=True)
+            #self.config.task_stop()
+            #return
         try:
             self.load_campaign()
             self.campaign.clear_month_boss()
