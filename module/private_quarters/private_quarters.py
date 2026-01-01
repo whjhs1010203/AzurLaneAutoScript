@@ -137,10 +137,7 @@ class PrivateQuarters(PQInteract, PQShop):
 
         # Enter shop and buy weekly items (if any)
         if self.shop_filter:
-            if server.server not in ['tw']:
-                self.pq_shop_weekly_items()
-            else:
-                logger.info(f'Private Quarters shop not supported for {server.server} server.')
+            self.pq_shop_weekly_items()
 
         # Interact with target if enabled
         if target_interact:
